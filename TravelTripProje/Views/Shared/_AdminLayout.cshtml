@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<body>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:10%">
+        <h3 class="w3-bar-item">Menüler</h3>
+        <a href="/Admin/Index/" class="w3-bar-item w3-button btn btn-warning">Bloglar</a>
+        <a href="/Admin/YorumListesi/" class="w3-bar-item w3-button btn btn-warning ">Yorumlar</a> @*//Bu kısım tamamen butonlardan yönlendirilecek sayfalar. Controllerda buna göre*@
+        <a href="/Admin/İletişim/" class="w3-bar-item w3-button btn btn-warning">İletişim</a>
+        <a href="/Admin/Hakkımızda/" class="w3-bar-item w3-button btn btn-warning">Hakkımızda</a>
+        <a href="/Default/Index/" class="w3-bar-item w3-button btn btn-warning">Siteye Git</a>
+        <a href="/GirisYap/LogOut/" class="w3-bar-item w3-button btn btn-danger">Çıkış Yap</a>
+    </div>
+
+    <!-- Page Content -->
+    <div style="margin-left:10%">
+
+        <div class="w3-container w3-teal">
+            <h4>Admin Yönetim Paneli</h4>
+
+        </div>
+        @RenderBody()
+    </div>
+
+</body>
+</html>
+
+@*bAŞLARDa verdiğimiz rota tamamen panelden ulaşım sağlayıp ne çekeceğimizi görmek için*@

@@ -1,0 +1,20 @@
+﻿@using TravelTripProje.Models.Siniflar
+@model List<Blog>
+
+<div class="padding1">
+    <h4>En Beğendiğim Yerler</h4>
+    <div class="box-left">
+        @foreach(var x in Model) //Bu bölümün bloglarını 3 sağ 3 sol olarak bölerek partial(5) içinde partiaL YAPTIk defaultController da
+        {
+        <div class="bot-img">
+            <img src="@x.BlogImage" alt="" />
+        </div>
+        <div class="bot-desc">
+            <p>@x.Aciklama.Substring(0, 80)... </p>
+        </div>
+        <div class="clear"></div>
+         
+        }
+    </div>
+    @Html.Action("Partial5","Default")
+</div>

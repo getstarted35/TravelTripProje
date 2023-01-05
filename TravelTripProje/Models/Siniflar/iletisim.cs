@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
+
+namespace TravelTripProje.Models.Siniflar
+{
+    public class iletisim //Temanın Contact bölümü incelendiğinde aşağıdaki propların neden kullandığımızı anlayabiliriz
+    {
+        [Key]
+        public int ID { get; set; }
+        public string AdSoyad { get; set; }
+        public string Mail { get; set; }
+        public string Konu { get; set; }
+        public string Mesaj { get; set; }
+
+    }
+}
